@@ -7,9 +7,12 @@ public class GameOverPresenter : MonoBehaviour
     [SerializeField]
     GameOverTextViewer m_gameOverTextViewer = null;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider collision)
     {
-        m_gameOverTextViewer.GameOverTextView();
+        if (collision.gameObject.tag == "Player")
+        {
+            m_gameOverTextViewer.GameOverTextView();
+        }
     }
 
 }

@@ -13,7 +13,7 @@ public class GameOverTextViewer : MonoBehaviour
     public void GameOverTextView()
     {
         m_gameovertext.text = gameovertext;
-        Time.timeScale = 0f;
+        Time.timeScale = 0f; 
     }
 
     

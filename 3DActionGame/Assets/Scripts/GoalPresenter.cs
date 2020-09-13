@@ -6,9 +6,12 @@ public class GoalPresenter : MonoBehaviour
 {
     [SerializeField]
     GameClearTextViewer m_gameClearTextViewer = null;
-    
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerEnter(Collider collision)
     {
-        m_gameClearTextViewer.ClearTextView();
+        if (collision.gameObject.tag == "Player")
+        {
+            m_gameClearTextViewer.ClearTextView();
+        }
     }
 }
